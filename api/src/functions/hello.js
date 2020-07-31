@@ -1,4 +1,4 @@
-import { db } from 'api/src/lib/db'
+const { db } = require('api/src/lib/db')
 
 export const handler = async (event, context) => {
   const users = await db.user.findMany()
