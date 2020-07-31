@@ -1,4 +1,5 @@
-const { db } = require('api/src/lib/db')
+const { PrismaClient } = require('@prisma/client')
+export const db = new PrismaClient()
 
 export const handler = async (event, context) => {
   const users = await db.user.findMany()
